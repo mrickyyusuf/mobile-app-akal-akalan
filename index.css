@@ -1,29 +1,57 @@
+/* 1. Fluid Container & Dasar */
 body {
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
+    /* Ruang bernapas ekstra */
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 250px;
+    width: 100%;
+    max-width: 400px;
+    /* Lebar maksimal dibesarkan agar proporsional di desktop */
+    box-sizing: border-box;
+    /* Memastikan padding tidak menambah lebar total */
 }
 
 label {
     color: #5f9341;
     font-weight: 900;
+    display: block;
+    margin-bottom: 8px;
 }
 
+/* 2. Input yang Fleksibel */
 input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    /* Area sentuh (tap target) lebih besar untuk mobile */
     box-sizing: border-box;
     border: 1px solid #5f9341;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    /* Mencegah auto-zoom di browser iOS saat mengetik */
+}
+
+/* 3. Layout Tombol Responsif (Flexbox) */
+.button-container {
+    display: flex;
+    gap: 8px;
+    /* Jarak rapi antar tombol */
+    flex-wrap: wrap;
+    /* Tombol otomatis turun baris jika layar terlalu sempit */
 }
 
 button {
     background: #5f9341;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: 1px solid #5f9341;
     font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    /* Membuat tombol mengisi ruang kosong secara merata */
+    min-width: 100px;
+    /* Mencegah tombol menyusut terlalu ekstrem */
 }
 
 #delete-btn {
@@ -31,6 +59,12 @@ button {
     color: #5f9341;
 }
 
+/* Interaksi visual saat tombol di-hover (opsional) */
+button:hover {
+    opacity: 0.9;
+}
+
+/* 4. Daftar & Pencegahan Teks Meluber */
 ul {
     margin-top: 20px;
     list-style: none;
@@ -38,11 +72,21 @@ ul {
 }
 
 li {
-    margin-top: 5px;
+    margin-top: 8px;
+    padding: 10px;
+    background: #f4f6f3;
+    /* Background tipis pemisah antar item */
+    border-radius: 4px;
 }
 
 a {
     color: #5f9341;
+    text-decoration: none;
+    font-weight: bold;
+    word-break: break-all;
+    /* Prinsip krusial: Memaksa URL panjang turun baris agar tidak merusak layout */
 }
 
-
+a:hover {
+    text-decoration: underline;
+}
