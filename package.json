@@ -13,5 +13,26 @@
   "type": "module",
   "devDependencies": {
     "vite": "^8.3.0"
-  }
+  },
+  "dependencies": {
+    "detect-libc": "^2.1.2",
+    "fdir": "^6.5.0",
+    "lightningcss": "^1.33.0",
+    "lightningcss-win32-x64-msvc": "^1.33.0",
+    "nanoid": "^3.3.19",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.7",
+    "postcss": "^8.5.28",
+    "rolldown": "^1.2.8",
+    "source-map-js": "^1.2.1",
+    "tinyglobby": "^0.2.17"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrickyyusuf/mobile-app-akal-akalan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrickyyusuf/mobile-app-akal-akalan/issues"
+  },
+  "homepage": "https://github.com/mrickyyusuf/mobile-app-akal-akalan#readme"
 }
